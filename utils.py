@@ -32,13 +32,13 @@ def generate_script(subject, video_length, creativity, api_key):
     title_chain = title_template | model
     script_chain = script_template | model
 
-    title = title_chain.invoke({"subject": subject}).content
+    title = title_chain.invoke({"subject": subject})
 
     search = WikipediaAPIWrapper(lang="zh")
     search_result = search.run(subject)
 
     script = script_chain.invoke({"title": title, "duration": video_length,
-                                  "wikipedia_search": search_result}).content
+                                  "wikipedia_search": search_result})
 
     return search_result, title, script
 
