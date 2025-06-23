@@ -26,7 +26,7 @@ def generate_script(subject, video_length, creativity, api_key):
         model='gpt-4o', 
         openai_api_key=api_key, 
         temperature=creativity, 
-        base_url='https://xiaoai.plus/'
+        base_url='https://xiaoai.plus/v1'
     )
 
     title_chain = title_template | model
