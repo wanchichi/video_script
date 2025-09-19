@@ -4,7 +4,7 @@ from utils import generate_script
 st.title("视频脚本🤖生成器")
 
 with st.sidebar:
-    openai_api_key = st.text_input("要输入OpenAI API密钥~：", type="password")
+    openai_api_key = st.text_input("要输入OpenAI API密钥：", type="password")
     st.markdown("[点击获取OpenAI API密钥嗷](https://platform.openai.com/account/api-keys)")
 
 subject = st.text_input("你的视频主题是什么嘞?")
